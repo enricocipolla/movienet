@@ -210,7 +210,7 @@ def main():
     st.title("Movie Recommendation System")
     st.write("Our Film Dataset!", data.title)
     # Input from user
-    user_movie = st.text_input("Enter the film you just watched: (for example: Il Re Leone)")
+    user_movie = st.selectbox("Enter the film you just watched:", data['title'].tolist())
     preference = st.radio("What kind of film do you want to watch next?", ( "You might like",  "You might try", "Expand your horizons" , "Something different"))
 
     # Display recommendation
